@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    
+    <title>Medicinal plants Website</title>
+
+    <style>
+      nav {
+        background-color: rgb(96, 244, 96);
+      }
+      .one-edge-shadow {
+        box-shadow: 0 8px 2px -5px rgb(246, 245, 245);
+      }
+      .display-8 {
+        font-weight: 200;
+        font-size: 30px;
+        color: teal-200;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- navbar -->
+
+    <nav
+      class="one-edge-shadow navbar navbar-light sticky-top navbar navbar-expand-lg text-white"
+    >
+      <a class="navbar-brand ms-3 text-dark" href="/">
+        <link
+          rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+          crossorigin="anonymous"
+        />
+
+        <img
+          src="https://www.freepnglogos.com/uploads/shopping-cart-png/shopping-cart-green-isolated-photo-pixabay-1.png"
+          style="width:50px;height:50px;color:text-light;"
+        />Mplants</a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/store"
+              >Store <span class="sr-only">(current)</span></a
+            >
+          </li>
+        </ul>
+      </li>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/"
+          >About <span class="sr-only">(current)</span></a
+        >
+      </ul>
+      </li>
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/"
+          >FAQs <span class="sr-only">(current)</span></a
+        >
+        
+      </li>
+    </ul>
+
+        <ul class="navbar-nav my-2 my-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="/cart"
+              >Cart
+              <span class="badge badge-success"
+                >{{request.session.cart.keys|length}}</span
+              >
+              <span class="sr-only">(current)</span></a
+            >
+          </li>
+
+          {% if request.session.customer %}
+          
+
+          <li class="nav-item active">
+            <a class="nav-link" href="/orders"
+              >Orders<span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/logout"
+              >Logout<span class="sr-only">(current)</span></a
+            >
+          </li>
+          {% else %}
+
+          <li class="nav-item active">
+            <a class="nav-link" href="/signup"
+              >Signup<span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/login"
+              >Login<span class="sr-only">(current)</span></a
+            >
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </nav>
+    <!---->
+    {% block content %}{% endblock %}
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+<section class="questions section" id="navbarSupportedContent">
+  <h2 class="section__title-center questions__title container">
+    <br />
+    <br />
+    <br />
+    🙋Some common questions <br />
+    were often asked
+    
+  </h2>
+
+  <div class="questions__container container grid">
+    <div class="questions__group">
+      <div class="questions__item">
+        <header class="questions__header">
+          <i class="ri-add-line questions__icon"></i>
+          <h3 class="questions__item-title">
+            <br />
+            🌿How can i buy these products?
+          </h3>
+        </header>
+
+        <div class="questions__content">
+          <p class="questions__description">
+            🙂You must make an account if you don't have.  
+          </p>
+        </div>
+      </div>
+
+      <div class="questions__item">
+        <header class="questions__header">
+          <i class="ri-add-line questions__icon"></i>
+          <h3 class="questions__item-title">
+            🌿How should i use these plants?
+          </h3>
+        </header>
+
+        <div class="questions__content">
+          <p class="questions__description">
+            🙂Depending on product it can be used raw,cooked or drunk as a tea.
+          </p>
+        </div>
+      </div>
+
+      <div class="questions__item">
+        <header class="questions__header">
+          <i class="ri-add-line questions__icon"></i>
+          <h3 class="questions__item-title">
+            🌿Can i use these products together?
+          </h3>
+        </header>
+
+        <div class="questions__content">
+          <p class="questions__description">
+            🙂No, they might interfere medically.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="questions__group">
+      <div class="questions__item">
+        <header class="questions__header">
+          <i class="ri-add-line questions__icon"></i>
+          <h3 class="questions__item-title"> 🌿Can i use these products as treatment?</h3>
+        </header>
+
+        <div class="questions__content">
+          <p class="questions__description">
+            🙂No, for that please consult your doctor.
+          </p>
+        </div>
+      </div>
+
+      <div class="questions__item">
+        <header class="questions__header">
+          <i class="ri-add-line questions__icon"></i>
+          <h3 class="questions__item-title">🌿Can i use these products a lot if they are effective?</h3>
+        </header>
+
+        <div class="questions__content">
+          <p class="questions__description">
+            🙂No we specifically forbid that.
+            <br />
+            -------------------------------------------------------------------------------------------------------------
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer section">
+    <div class="footer__container container grid">
+      <div class="footer__content">
+        <a href="#" class="footer__logo">
+          <i class="ri-leaf-line footer__logo-icon"></i> |Mplants|
+        </a>
+  
+    
+       
+      <div class="footer__content">
+        <h4 class="footer__title">Our Address</h4>
+  
+        <ul class="footer__data">
+          <li class="footer__information">Tehran-Iran</li>
+  
+        </ul>
+      </div>
+  
+      <div class="footer__content">
+        <h4 class="footer__title">Contact Us</h4>
+  
+        <ul class="footer__data">
+          <li class="footer__information">+999 888 777</li>
+  
+  
+        </ul>
+      </div>
+  
+  
+    <p class="footer__copy">&#169; Mplants. All rigths reserved</p>
+    
+  </footer>
+</section>
